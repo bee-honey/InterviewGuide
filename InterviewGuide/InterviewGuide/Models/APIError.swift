@@ -12,4 +12,5 @@ enum APIError: Error {
     case networkingIssue
     case invalidData
     case invalidRequest
+    case invalidURL
 }
