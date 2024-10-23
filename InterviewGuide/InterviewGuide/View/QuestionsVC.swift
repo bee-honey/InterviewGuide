@@ -48,7 +48,7 @@ class QuestionsVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             if (questions.count > 0) {
                 showQuestion(at: currentQuestionIndex)
             } else {
-                print("No questions to show")
+                debugPrint("No questions to show")
             }
             
         }
@@ -69,7 +69,7 @@ class QuestionsVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             try await questionViewModel.fetchQuestions(categoryID: self.categoryID ?? 0, topicID: self.topicID ?? 0)
             questions = questionViewModel.questions
         } catch {
-            print("Error loading initial data: \(error)")
+            debugPrint("Error loading initial data: \(error)")
         }
     }
     
@@ -193,7 +193,7 @@ class QuestionsVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     // Handle answer button tap
     @objc func answerTapped(sender: UIButton) {
         guard let answerText = sender.title(for: .normal) else { return }
-        print("Selected answer: \(answerText)")
+        debugPrint("Selected answer: \(answerText)")
     }
     
     // Handle "Next" button tap
@@ -220,7 +220,7 @@ class QuestionsVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     @objc func submitAnswer() {
         guard let selectedIndex = selectedAnswerIndex else {
-            print("No answer selected")
+            debugPrint("No answer selected")
             return
         }
         

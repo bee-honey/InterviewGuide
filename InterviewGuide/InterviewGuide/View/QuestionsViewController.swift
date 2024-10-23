@@ -38,7 +38,7 @@ class QuestionsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath)
         let question = questionViewModel.questions[indexPath.row]
-        print(question)
+        debugPrint(question)
         cell.textLabel?.text = question.questionText
         return cell
     }
@@ -50,7 +50,7 @@ class QuestionsViewController: UITableViewController {
                 self.tableView.reloadData() // Refresh table view
                 self.tableView.refreshControl?.endRefreshing() // End refresh
             } catch {
-                print("NKK: Error refreshing categories: \(error)")
+                debugPrint("NKK: Error refreshing categories: \(error)")
                 tableView.refreshControl?.endRefreshing() // End refresh in case of error
             }
         }
@@ -61,7 +61,7 @@ class QuestionsViewController: UITableViewController {
             try await questionViewModel.fetchQuestions(categoryID: self.categoryID ?? 0, topicID: self.topicID ?? 0)
             tableView.reloadData() // Refresh table view
         } catch {
-            print("Error loading initial data: \(error)")
+            debugPrint("Error loading initial data: \(error)")
         }
     }
     

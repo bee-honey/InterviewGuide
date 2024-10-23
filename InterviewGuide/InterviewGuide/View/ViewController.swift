@@ -57,7 +57,7 @@ class ViewController: UITableViewController {
                 self.tableView.reloadData() // Refresh table view
                 self.tableView.refreshControl?.endRefreshing() // End refresh
             } catch {
-                print("NKK: Error refreshing categories: \(error)")
+                debugPrint("NKK: Error refreshing categories: \(error)")
                 tableView.refreshControl?.endRefreshing() // End refresh in case of error
             }
         }
@@ -68,7 +68,7 @@ class ViewController: UITableViewController {
             try await categoryViewModel.fetchCategories() // Fetch data
             tableView.reloadData() // Refresh table view
         } catch {
-            print("Error loading initial data: \(error)")
+            debugPrint("Error loading initial data: \(error)")
         }
     }
 }

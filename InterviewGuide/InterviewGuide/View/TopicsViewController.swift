@@ -56,7 +56,7 @@ class TopicsViewController: UITableViewController {
                 self.tableView.reloadData() // Refresh table view
                 self.tableView.refreshControl?.endRefreshing() // End refresh
             } catch {
-                print("NKK: Error refreshing categories: \(error)")
+                debugPrint("NKK: Error refreshing categories: \(error)")
                 tableView.refreshControl?.endRefreshing() // End refresh in case of error
             }
         }
@@ -67,7 +67,7 @@ class TopicsViewController: UITableViewController {
             try await topicViewModel.fetchTopics(categoryID: self.categoryID ?? 0 ) // Fetch data
             tableView.reloadData() // Refresh table view
         } catch {
-            print("Error loading initial data: \(error)")
+            debugPrint("Error loading initial data: \(error)")
         }
     }
     
