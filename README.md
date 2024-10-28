@@ -52,6 +52,10 @@ To set up the InterviewGuide app on your development machine:
 
 Coming soon…
 
+## ScreenRecording
+
+https://github.com/user-attachments/assets/3dc53ad1-e6cb-48b9-8359-f3c441e2ac40
+
 ## Contributing
 
 We welcome contributions! Please fork this repository, create a branch, and submit a pull request.
