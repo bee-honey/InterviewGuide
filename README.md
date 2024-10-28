@@ -20,8 +20,46 @@ To set up the InterviewGuide app on your development machine:
 - **iOS Version**: Targets iOS 14.0 and above.
 - **Backend API Access**: Ensure the Interview backend is up and running to allow full app functionality.
 
-### Installation Steps
+## Installation and Setup
 
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/bee-honey/InterviewGuide.git
+
+2. **Open in Xcode**:
+   - Open `InterviewGuide.xcodeproj` in Xcode.
+
+3. **Configure Backend URL**:
+   - Set the API endpoint in the app configuration files to point to your backend instance.
+
+4. **Build and Run**:
+   - Build the app by selecting your target device or simulator in Xcode and pressing `Cmd + R`.
+
+## Usage
+
+- **Login/Register**: Create an account or log in to access your personalized interview preparation dashboard.
+- **Answering Questions**: Select question categories and start answering multiple-choice questions.
+- **Review**: Access your answer history to view past responses and explanations.
+
+## Technologies Used
+
+- **Swift**: For developing the iOS app.
+- **SwiftUI**: For a dynamic and visually engaging UI.
+- **Backend Integration**: Communicates with the interview backend to fetch and save data.
+- **RESTful API**: Handles network requests to and from the backend server.
+
+## Screenshots
+
+Coming soon…
+
+## Contributing
+
+We welcome contributions! Please fork this repository, create a branch, and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Related Repositories
+
+- **[Interview Backend](https://github.com/bee-honey/developerinterviews)** - The backend API for managing interview questions, developed with Spring Boot and Java.
